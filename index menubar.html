@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: #3cc0f0;
+        }
+
+        header {
+            background: black;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav ul li {
+            position: relative;
+            padding: 8px 15px;
+        }
+
+        nav ul li:hover {
+            background: white;
+            border-radius: 8px;
+        }
+
+        nav ul li:hover>a {
+            color: black;
+        }
+
+        /* First level */
+        nav ul li ol {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: black;
+            display: none;
+            min-width: 150px;
+        }
+
+        nav ul li:hover>ol {
+            display: block;
+        }
+
+        nav ul li ol li {
+            padding: 10px;
+            white-space: nowrap;
+        }
+
+        nav ul li ol li:hover {
+            background: white;
+        }
+
+        nav ul li ol li:hover>a {
+            color: black;
+        }
+
+        /* Second Level */
+        nav ul li ol li ol {
+            top: 0;
+            left: 150px;
+            display: none;
+        }
+
+        nav ul li ol li:hover>ol {
+            display: block;
+        }
+
+        /*  Third Level */
+        nav ul li ol li ol li ol {
+            top: 0;
+            left: 150px;
+            display: none;
+        }
+
+        nav ul li ol li ol li:hover>ol {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">WordPress</a></li>
+
+                <li>
+                    <a href="#">Web Design</a>
+                    <ol>
+                        <li><a href="#">Resource</a></li>
+                        <li><a href="#">Links</a></li>
+
+                        <li>
+                            <a href="#">Tutorials</a>
+                            <ol>
+                                <li><a href="#">HTML/CSS</a></li>
+                                <li><a href="#">JQuery</a></li>
+
+                                <li>
+                                    <a href="#">Other+</a>
+                                    <ol>
+                                        <li><a href="#">Stuff</a></li>
+                                        <li><a href="#">Things</a></li>
+                                        <li><a href="#">Other Stuff</a></li>
+                                    </ol>
+                                </li>
+
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
